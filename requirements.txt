@@ -1,0 +1,5 @@
+Flask==2.0.2
+Flask_Session==0.4.0
+Pillow==8.4.0
+requests==2.26.0
+Werkzeug==2.0.2
