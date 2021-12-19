@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        {% if session["user_id"] %}
+        <div class="mx-auto"> 
+            <h3 class="text-secondary text-center mb-3">Get clothing suggestions</h3>
+            <form class="form-inline mb-3" action="/get_selection" method="POST">
+                <input autofocus autocomplete="off" class="form-control mr-2 mb-2" name="location" placeholder="Enter Location" type="text">
+                <button class="btn btn-secondary mb-2" type="submit">Get Result</button>      
+            </form>
+        </div>   
+        {% else %}
+        <div class="mx-auto">
+            <h3 class="text-secondary text-center mb-3">Get weather info</h3>
+            <form class="form-inline mb-3" action="/get_weather" method="POST">
+                <input autofocus autocomplete="off" class="form-control mr-2 mb-2" name="location" placeholder="Enter Location" type="text">
+                <button class="btn btn-secondary mb-2" type="submit">Get Info</button>      
+            </form>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="container-fluid intro ">
+        <p class="font-weight-lighter">
+            A closet full of clothes but still nothing to wear?
+            <br>
+            Freezing outside because you forgot your gloves and scarf again?
+            <br>
+            Or maybe sweating like a pig because you forgot you have lighter dresses in the back of your closet?
+        </p>
+        <p>
+            You probably didn't really check the weather report before opening the closet and
+            <br>trusted your gut by looking through the window and assuming the temperature.
+            <br>
+            But you should!
+        </p>
+        
+        <h5>Welcome to the revolutionary tool for everyday use</h5>
+    </div>  
+    
+    <h2 class="text-secondary text-center">How does it work?</h2>
+    <div class="illustrations text-center">
+        <div>
+            <img class="square-icon" src="/static/closet.jpg" alt="closet">
+            <p class="text-dark">Add clothing items to your online closet.</p>
+        </div>
+        <div>
+            <img class="square-icon" src="/static/sky.jpg" alt="sky">
+            <p class="text-dark">Get weather report for the selected location.</p>
+        </div>
+        <div>
+            <img class="square-icon" src="/static/outfit.jpg" alt="outfit">
+            <p class="text-dark">Receive clothing suggestions based on the weather report.</p>
+        </div>
+    </div>
+
+    <div class="customer-quote text-justify font-weight-lighter mb-5">
+        <blockquote>
+            I now wonder how I got through the days without such a useful tool. 
+            Always thinking I have nothing to wear, this app showed me not only I have a wardrobe full of
+            clothes that I can wear at different times of the year, but also inspired me to make some new 
+            and more daring outfits that contributed to building my personal style. 
+            <cite class="float-right mt-3 font-weight-bolder">-Klara, satisfied customer</cite>  
+        </blockquote>
+    </div>
+
+    {% if not session["user_id"] %}
+    <div class="register-ad">
+        <div>
+            <h3>Ready to join? Register now! </h3>
+            <p class="mb-0 text-dark">Create your account and start discovering the depths of your wardrobe.</p>
+        </div>
+        <button class="btn btn-secondary"><a href="/register">Register</a></button>
+    </div>
+    {% endif %}
+{% endblock %}

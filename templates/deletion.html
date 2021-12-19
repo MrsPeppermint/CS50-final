@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Delete account
+{% endblock %}
+
+{% block main %}
+<form class="form-size mx-auto" action="/delete_account" method="POST">
+    <h2>Enter password to confirm deletion of your account</h2>
+    <div>
+        <input class="form-control" autofocus autocomplete="off" name="password" placeholder="Password" type="password">
+    </div>
+    <button class="btn btn-secondary" type="submit">Delete account</button>
+</form>
+{% endblock %}
