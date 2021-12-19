@@ -82,6 +82,12 @@ A registered user has an option to change his password and to delete his account
 #### Guest user function
 The webpage also has limited funtionality for guest users - they can only retrieve information about the weather in a specific city.
 
+## Ideas for improvement
+* Use current user's location acquired by his IP address
+* Create outfit ideas based on the color matching
+* Connect to bigger clothing stores' databases and allow user to choose items from those databases
+* Add more profile info (connect to e-mail and add forgot password function)
+
 ## Author
 Klara Žnideršič AKA [MrsPeppermint](https://github.com/MrsPeppermint)
 
