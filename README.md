@@ -82,6 +82,9 @@ A registered user has an option to change his password and to delete his account
 #### Guest user function
 The webpage also has limited funtionality for guest users - they can only retrieve information about the weather in a specific city.
 
+#### Video Presentation
+[Link](https://youtu.be/xXdwa72IAg0) to the video.
+
 ## Ideas for improvement
 * Use current user's location acquired by his IP address
 * Create outfit ideas based on the color matching
